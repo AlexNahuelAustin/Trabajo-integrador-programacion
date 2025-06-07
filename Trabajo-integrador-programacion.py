@@ -102,40 +102,40 @@ nodo_i.agregar_funcion_de_las_direcciones(nodo_r)
 
 
 # -------- IMPRESIONES --------
-#print("\nDependencias de los  bomberos:")  # Imprimi las dependencias desde la Raiz
+print("\nDependencias de los  bomberos:")  # Imprimi las dependencias desde la Raiz
 
-#for nodo in raiz.bomberos.values(): # 
-#    print(" >", nodo.policia) # 
+for nodo in raiz.bomberos.values(): # 
+    print(" >", nodo.policia) # 
 
-#print("\nDependencias de la Dirección de Bomberos:") # Imprime los nodos de la Direccion bomberos
-#for nodo in nodo_a.bomberos.values():# 
-#    print("  >", nodo.policia) # 
+print("\nDependencias de la Dirección de Bomberos:") # Imprime los nodos de la Direccion bomberos
+for nodo in nodo_a.bomberos.values():# 
+    print("  >", nodo.policia) # 
 
-#print("\nDependencias del DPTO. Coordinación Operativa:") # Imprime los nodos del Dpto, coordinacion operativa
-#for nodo in nodo_b.bomberos.values():
-#    print(" >", nodo.policia) #
+print("\nDependencias del DPTO. Coordinación Operativa:") # Imprime los nodos del Dpto, coordinacion operativa
+for nodo in nodo_b.bomberos.values():
+    print(" >", nodo.policia) #
 
-#print("\nSubfunciones de Investigación Siniestro:") # Imprime los nodo de Investigaciones Siniestrales
-#for nodo in nodo_i.bomberos.values():
-#    print(" >", nodo.policia) # 
+print("\nSubfunciones de Investigación Siniestro:") # Imprime los nodo de Investigaciones Siniestrales
+for nodo in nodo_i.bomberos.values():
+    print(" >", nodo.policia) # 
 
 
 # -------- CALCULAR GRADO Y PESO --------
-#grado = raiz.calcular_grado_arbol()
-#peso = raiz.calcular_peso_arbol()
+grado = raiz.calcular_grado_arbol()
+peso = raiz.calcular_peso_arbol()
 
-##print(f"\nEl grado del árbol es: {grado}") # Imprimimos el Grado del arbol
-#print(f"El peso del árbol es igual a: {peso}")# Imprimimos el Peso del arbol
+print(f"\nEl grado del árbol es: {grado}") # Imprimimos el Grado del arbol
+print(f"El peso del árbol es igual a: {peso}")# Imprimimos el Peso del arbol
 
 
 # -------- BUSCAR CAMINO HASTA UN NODO --------
-#camino = raiz.buscar_dependencia(nodo_r)  # Buscamos el recorrido del nodo_r
+camino = raiz.buscar_dependencia(nodo_r)  # Buscamos el recorrido del nodo_r
 
-# Imprime el camino encontrado en caso que exista
-#print("\nCamino jerárquico hasta 'Sección Informes Técnicos':")
+#Imprime el camino encontrado en caso que exista
+print("\nCamino jerárquico hasta 'Sección Informes Técnicos':")
 
-#for paso in camino:
-#    print(" >", paso.policia)
+for paso in camino:
+    print(" >", paso.policia)
     
 
 raiz.organigrama()
