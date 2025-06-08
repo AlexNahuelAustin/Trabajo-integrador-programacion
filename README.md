@@ -7,4 +7,4 @@ Tema: Datos Avanzados
 
 Objetivo: El objetivo es comprender el funcionamiento interno de los árboles y valorar su importancia en el desarrollo eficiente y organizado.
 
-Link del video :
+Link del video : https://youtu.be/XLDkis_V_mw
