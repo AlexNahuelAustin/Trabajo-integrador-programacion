@@ -137,5 +137,5 @@ print("\nCamino jerárquico hasta 'Sección Informes Técnicos':")
 for paso in camino:
     print(" >", paso.policia)
     
-
+#impime el organigrama
 raiz.organigrama()
