@@ -138,4 +138,5 @@ for paso in camino:
     print(" >", paso.policia)
     
 #impime el organigrama
+print("\n el organigrama de la direccion de bomberos es: ")
 bombero.organigrama()
