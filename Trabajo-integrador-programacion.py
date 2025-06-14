@@ -27,7 +27,7 @@ class Nodo: # Se defino la clase para reprentar cada area en el organigrama
         return len(self.bomberos) # Retorna la cantidad de nodos
 
 
-    # funcion para calcular el grado maximo del arbol 
+    # Funcion para calcular el grado maximo del arbol 
     def calcular_grado_arbol(self):
         # Grado del árbol: máximo grado de todos los nodos
         grado_maximo = self.calcular_grado_nodo() # Se calcula el grado actual del nodo
@@ -44,8 +44,8 @@ class Nodo: # Se defino la clase para reprentar cada area en el organigrama
     
     # Esta funcion genera e imprime una reprensetacion jerargica del arbol 
     def organigrama(self,indentado = 0): 
-        salto_de_la_rama = "  " * indentado # Crea un str de espacios que se usara para identar y mejorar visualmetne cada nivel del arbol  
-        print(f"{salto_de_la_rama} |--- {self.policia} ") # imprime el nombre de la unidad con identacion y un formato de rama de arbol
+        salto_de_la_rama = "  " * indentado # Crea espacios que se usara para identar y mejorar visualmetne cada nivel del arbol  
+        print(f"{salto_de_la_rama} |--- {self.policia} ") # Imprime el nombre de la unidad con identacion y un formato de rama de arbol
         for depenecias in self.bomberos.values():
             depenecias.organigrama(indentado + 1) # llama recursivamente al metodo organigrama para cada dependencia 
         
@@ -102,8 +102,7 @@ division_b.agregar_funcion_de_las_direcciones(seccion_h)
 
 
 # -------- IMPRESIONES --------
-print("\nDependencias de los  bomberos:")  # Imprimi las dependencias desde la Raiz
-
+print("\nDependencias de los  bomberos:")  # Imprime las dependencias desde la Raiz
 for nodo in bombero.bomberos.values(): # 
     print(" >", nodo.policia) # 
 
@@ -131,12 +130,12 @@ print(f"El peso del árbol es igual a: {peso}")# Imprimimos el Peso del arbol
 # -------- BUSCAR CAMINO HASTA UN NODO --------
 camino = bombero.buscar_dependencia(seccion_h)  # Buscamos el recorrido del nodo_r
 
-#Imprime el camino encontrado en caso que exista
+# -------- IMPRIME EL RECORRIDO --------
 print("\nCamino jerárquico hasta 'Sección Informes Técnicos':")
 
 for paso in camino:
     print(" >", paso.policia)
-    
-#impime el organigrama
-print("\n el organigrama de la direccion de bomberos es: ")
+
+# -------- IMPRIME EL ORGANIGRAMA --------
+print("\nEl organigrama de la direccion de bomberos es: ")
 bombero.organigrama()
